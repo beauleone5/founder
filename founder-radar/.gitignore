@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+weekly_reports/*.md
+weekly_reports/*.html
+weekly_reports/*.json
+!weekly_reports/.gitkeep

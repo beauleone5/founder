@@ -1,0 +1,32 @@
+{
+  "sources": {
+    "producthunt": true,
+    "hackernews": true,
+    "github_trending": true,
+    "angellist": false,
+    "yc_directory": true,
+    "perplexity_universities": true,
+    "manual_input": true
+  },
+  "filters": {
+    "university": ["Waterloo", "Queen's", "Stanford", "MIT", "UC Berkeley", "University of Toronto"],
+    "age_range": [18, 35],
+    "location": ["Toronto", "SF Bay Area", "NYC", "Boston", "Seattle"],
+    "product_niche": ["AI infra", "Fintech", "DevTools", "Climate", "HealthTech", "EdTech"],
+    "technical_background": ["CS", "Engineering", "Math", "Physics", "Data Science"],
+    "min_execution_score": 10,
+    "min_technical_score": 10,
+    "exclude_non_technical": true
+  },
+  "weights": {
+    "execution_velocity": 0.25,
+    "technical_depth": 0.25,
+    "momentum_score": 0.20,
+    "market_potential": 0.20,
+    "credibility": 0.10
+  },
+  "scraping": {
+    "max_items_per_source": 50,
+    "fetch_interval_hours": 24
+  }
+}
