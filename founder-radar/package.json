@@ -8,6 +8,8 @@
     "start": "node dist/src/index.js",
     "dev": "ts-node src/index.ts",
     "migrate": "ts-node src/db/migrate.ts",
+     "start:migrate": "npm run migrate && npm start",
+
     "weekly-report": "ts-node scripts/generate-weekly-report.ts",
     "test": "echo \"Tests not yet implemented\" && exit 0"
   },
