@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: founder-radar-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: PERPLEXITY_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: founder-radar-db
+          property: connectionString
+
+databases:
+  - name: founder-radar-db
+    databaseName: founder_radar
+    plan: free
+    user: founder_radar_user
