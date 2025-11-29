@@ -36,8 +36,8 @@ async function startServer() {
   try {
     const connected = await db.testConnection();
     if (!connected) {
-      console.error('Failed to connect to database');
-      process.exit(1);
+      console.warn('⚠️  Database connection failed - running in API-only mode');
+      console.warn('⚠️  Founder data will not persist. Install and start PostgreSQL for full functionality.');
     }
 
     const cronSchedule = process.env.WEEKLY_REPORT_CRON || '0 9 * * 1';

@@ -2,10 +2,10 @@
   "name": "founder-radar",
   "version": "1.0.0",
   "description": "VC sourcing engine for discovering and ranking early-stage founders",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/src/index.js",
     "dev": "ts-node src/index.ts",
     "migrate": "ts-node src/db/migrate.ts",
     "weekly-report": "ts-node scripts/generate-weekly-report.ts",

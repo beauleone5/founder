@@ -7,7 +7,7 @@ class ConfigManager {
   private config: AppConfig;
 
   constructor(configPath?: string) {
-    this.configPath = configPath || join(__dirname, '../../config/default.json');
+    this.configPath = configPath || join(process.cwd(), 'config/default.json');
     this.config = this.loadConfig();
   }
 
